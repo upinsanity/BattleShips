@@ -8,6 +8,7 @@ class Player
 	queue<string> m_Moves;
 public:
 	Player(int nRow, int nCol);
+	~Player();
 	void placeShip(int nHeight, int nWidth, int posX, int posY, eShipType type);
 	bool firedAt(int posX, int posY, bool& bAllShipsShot);
 	void printBattleArea();
