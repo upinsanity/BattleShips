@@ -20,13 +20,8 @@ bool BattleShipGame::loadGame()
 		ifs >> col;
 		ifs >> rowCh;
 		int row = rowCh - 'A' + 1;
-
-
-		Player player1(row, col);
-		Player player2(row, col);
-
-		mPlayers.push_back(player1);
-		mPlayers.push_back(player2);
+		mPlayers.push_back(Player(row, col));
+		mPlayers.push_back(Player(row, col));
 
 		int shipCount = ifs.get();
 		ifs >> shipCount;
