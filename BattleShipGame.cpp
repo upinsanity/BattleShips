@@ -10,7 +10,7 @@ using namespace std;
 
 bool BattleShipGame::loadGame()
 {
-	std::cout << "Loading configuration...\n";
+	cout << "Loading configuration...\n";
 	std::ifstream ifs;
 	ifs.open(INPUTFILE, std::ifstream::in);
 	if (ifs.good())
@@ -23,7 +23,7 @@ bool BattleShipGame::loadGame()
 		mPlayers.push_back(Player(row, col));
 		mPlayers.push_back(Player(row, col));
 
-		int shipCount = ifs.get();
+		int shipCount;
 		ifs >> shipCount;
 
 		while (shipCount--)
